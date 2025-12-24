@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>TRAINER PRO - Sistema de Entrenamiento Inteligente | App de Fitness Revolucionaria</title>
+    <meta name="description"
+        content="TRAINER PRO es tu gimnasio en tu bolsillo. Sistema inteligente de entrenamiento que organiza rutinas por grupos musculares con tracking completo. 100% gratis, sin ads, código abierto.">
+    <meta name="keywords"
+        content="trainer pro, app fitness, entrenamiento, gimnasio, rutinas, ejercicios, tracking, open source">
+    <meta name="author" content="Trainer Pro Team">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trainerpro.app/">
+    <meta property="og:title" content="TRAINER PRO - Tu Gimnasio en Tu Bolsillo">
+    <meta property="og:description"
+        content="Sistema de entrenamiento inteligente que se adapta a ti. 100% gratis, sin ads, código abierto.">
+    <meta property="og:image" content="assets/images/hero-mockup.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://trainerpro.app/">
+    <meta property="twitter:title" content="TRAINER PRO - Tu Gimnasio en Tu Bolsillo">
+    <meta property="twitter:description"
+        content="Sistema de entrenamiento inteligente que se adapta a ti. 100% gratis, sin ads, código abierto.">
+    <meta property="twitter:image" content="assets/images/hero-mockup.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+
+<body>
+
+    <!-- ========== TRUST BANNER ========== -->
+    <div class="trust-banner" id="trustBanner">
+        <div class="container">
+            <div class="trust-banner-content">
+                <svg class="trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                    </path>
+                </svg>
+                <div>
+                    <span class="trust-text">🛡️ 100% SEGURO & OPEN SOURCE</span>
+                    <span class="trust-subtext"> • Sin virus. Sin malware. Sin recolección de datos.</span>
+                </div>
+                <a href="https://github.com/Abdolijvcc/musta_pro" target="_blank" rel="noopener" class="trust-link">
+                    Ver código fuente →
+                </a>
+                <button class="trust-close" id="closeTrustBanner" aria-label="Cerrar banner">×</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-grid"></div>
+        <canvas id="particles-canvas"></canvas>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1>ENTRENA COMO UN PRO</h1>
+                    <p class="hero-subtitle">
+                        Sistema de entrenamiento inteligente que organiza tus rutinas por grupos musculares.
+                        Tracking completo, análisis de progreso y todo en tu bolsillo.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="app-release.apk" download="TrainerPro.apk" class="btn btn-primary btn-mega glow-pulse">
+                            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                            DESCARGAR AHORA
+                        </a>
+                        <a href="https://github.com/Abdolijvcc/musta_pro" target="_blank" rel="noopener"
+                            class="btn btn-secondary">
+                            <svg class="btn-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            Ver Código
+                        </a>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="10000">0</span>
+                            <span class="stat-label">Descargas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.8★</span>
+                            <span class="stat-label">Rating</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Open Source</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hero-mockup fade-in stagger-2">
+                    <img src="assets/images/screenshots/screenshot1.jpg" alt="TRAINER PRO App" loading="eager"
+                        style="max-width: 350px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0, 217, 255, 0.4);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY TRAINER PRO SECTION ========== -->
+    <section class="why-section" id="features">
+        <div class="container">
+            <h2 class="section-title fade-in">¿Por Qué TRAINER PRO?</h2>
+            <p class="section-subtitle fade-in">La app de fitness que necesitas para llevar tu entrenamiento al
+                siguiente nivel</p>
+
+            <div class="grid-3">
+                <div class="card card-3d hover-lift fade-in stagger-1">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Sistema Inteligente de Ciclos</h3>
+                    <p class="card-description">
+                        Alterna grupos musculares automáticamente. El sistema organiza tus entrenamientos
+                        para maximizar resultados y evitar sobreentrenamiento.
+                    </p>
+                </div>
+
+                <div class="card card-3d hover-lift fade-in stagger-2">
+                    <div class="card-icon">📊</div>
+                    <h3 class="card-title">Análisis de Progreso Completo</h3>
+                    <p class="card-description">
+                        Historial detallado de cada sesión. Visualiza tu evolución, marcas personales
+                        y estadísticas de rendimiento en tiempo real.
+                    </p>
+                </div>
+
+                <div class="card card-3d hover-lift fade-in stagger-3">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">Diseño Profesional & Rápido</h3>
+                    <p class="card-description">
+                        Interfaz intuitiva diseñada para atletas. Accede a tus rutinas en segundos,
+                        sin complicaciones, sin distracciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SCREENSHOT GALLERY ========== -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title fade-in">Explora Cada Función</h2>
+            <p class="section-subtitle fade-in">Una interfaz potente diseñada para resultados reales</p>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-item fade-in stagger-1" data-screenshot="1">
+                    <img src="assets/images/screenshots/screenshot1.jpg"
+                        alt="Análisis de Marcas - Organiza por grupos musculares" loading="lazy">
+                    <div class="screenshot-overlay">
+                        <span class="screenshot-title">Análisis de Marcas</span>
+                    </div>
+                </div>
+
+                <div class="screenshot-item fade-in stagger-2" data-screenshot="2">
+                    <img src="assets/images/screenshots/screenshot2.jpg"
+                        alt="Modo Bucle - Entrenamientos en ciclo automático" loading="lazy">
+                    <div class="screenshot-overlay">
+                        <span class="screenshot-title">Modo Bucle</span>
+                    </div>
+                </div>
+
+                <div class="screenshot-item fade-in stagger-3" data-screenshot="3">
+                    <img src="assets/images/screenshots/screenshot3.jpg"
+                        alt="Modo Días - Programación semanal personalizada" loading="lazy">
+                    <div class="screenshot-overlay">
+                        <span class="screenshot-title">Modo Días</span>
+                    </div>
+                </div>
+
+                <div class="screenshot-item fade-in stagger-4" data-screenshot="4">
+                    <img src="assets/images/screenshots/screenshot4.jpg"
+                        alt="Grupos Editables - Personaliza cada ejercicio" loading="lazy">
+                    <div class="screenshot-overlay">
+                        <span class="screenshot-title">Grupos Editables</span>
+                    </div>
+                </div>
+
+                <div class="screenshot-item fade-in stagger-5" data-screenshot="5">
+                    <img src="assets/images/screenshots/screenshot5.jpg" alt="Historial - Tracking completo de progreso"
+                        loading="lazy">
+                    <div class="screenshot-overlay">
+                        <span class="screenshot-title">Historial Completo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURES DETAILED ========== -->
+    <section class="features-section">
+        <div class="container">
+            <div class="feature-row fade-in">
+                <div class="feature-content">
+                    <h3>🏋️ Sistema de Grupos Musculares</h3>
+                    <p>
+                        Organiza tus ejercicios en 5 grupos principales: <strong>Torso, Brazo, Pierna, Pecho y
+                            Espalda</strong>.
+                        Cada grupo es completamente personalizable, permitiéndote agregar, editar o eliminar ejercicios
+                        según tus necesidades.
+                    </p>
+                    <div class="trust-badges mt-6">
+                        <span class="badge">Personalizable</span>
+                        <span class="badge">Intuitivo</span>
+                        <span class="badge">Eficiente</span>
+                    </div>
+                </div>
+                <div class="feature-image fade-in-right">
+                    <img src="assets/images/screenshots/screenshot1.jpg" alt="Sistema de Grupos Musculares"
+                        loading="lazy">
+                </div>
+            </div>
+
+            <div class="feature-row fade-in">
+                <div class="feature-content">
+                    <h3>🔄 Dual Mode: Bucle vs Días</h3>
+                    <p>
+                        <strong>Modo Bucle:</strong> Entrena en ciclo automático, rotando entre grupos musculares para
+                        máxima eficiencia.<br>
+                        <strong>Modo Días:</strong> Planifica tu semana completa asignando grupos específicos a cada
+                        día.
+                    </p>
+                    <p>Cambia entre modos según tu rutina y objetivos.</p>
+                </div>
+                <div class="feature-image fade-in-left">
+                    <img src="assets/images/screenshots/screenshot2.jpg" alt="Modo Bucle y Modo Días" loading="lazy">
+                </div>
+            </div>
+
+            <div class="feature-row fade-in">
+                <div class="feature-content">
+                    <h3>📈 Tracking Profesional</h3>
+                    <p>
+                        Cada repetición cuenta. Cada sesión registrada. Visualiza tu progreso con gráficas detalladas,
+                        historial completo de entrenamientos y análisis de marcas personales.
+                    </p>
+                    <p>Toma decisiones basadas en datos reales, no en suposiciones.</p>
+                </div>
+                <div class="feature-image fade-in-right">
+                    <img src="assets/images/screenshots/screenshot5.jpg" alt="Tracking y Análisis" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OPEN SOURCE SECTION ========== -->
+    <section class="opensource-section" id="opensource">
+        <div class="container">
+            <h2 class="section-title fade-in">Código Abierto = Confianza Total</h2>
+            <p class="section-subtitle fade-in">Transparencia absoluta. Cada línea de código es auditable por ti.</p>
+
+            <div class="opensource-content">
+                <div class="fade-in-left">
+                    <h3>🔍 Transparencia Total</h3>
+                    <p>
+                        A diferencia de otras apps, TRAINER PRO es <strong>100% open source</strong>.
+                        Esto significa que puedes revisar cada función, cada algoritmo, cada línea de código.
+                    </p>
+                    <p>
+                        <strong>Sin código malicioso. Sin tracking oculto. Sin sorpresas.</strong>
+                    </p>
+
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Sin Virus
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Sin Tracking
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Privacy First
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/Abdolijvcc/musta_pro" target="_blank" rel="noopener"
+                        class="btn btn-primary mt-6">
+                        <svg class="btn-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Explora el Código en GitHub
+                    </a>
+                </div>
+
+                <div class="code-preview fade-in-right">
+                    <pre><code>// Ejemplo: Sistema de Ciclos
+class TrainingCycle {
+  constructor() {
+    this.groups = [
+      'Torso', 'Brazo', 
+      'Pierna', 'Pecho', 
+      'Espalda'
+    ];
+    this.currentIndex = 0;
+  }
+  
+  nextGroup() {
+    this.currentIndex = 
+      (this.currentIndex + 1) % 
+      this.groups.length;
+    return this.groups[
+      this.currentIndex
+    ];
+  }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title fade-in">Preguntas Frecuentes</h2>
+
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>¿Es realmente gratis?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Sí, 100% gratis. Sin compras dentro de la app, sin suscripciones, sin anuncios.
+                            TRAINER PRO es un proyecto open source creado para la comunidad fitness.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>¿Necesito internet para usar la app?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No. TRAINER PRO funciona completamente offline. Todos tus datos se guardan localmente
+                            en tu dispositivo, sin necesidad de conexión a internet.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>¿Por qué debería confiar en esta app?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Porque es open source. Puedes revisar cada línea de código en nuestro repositorio de GitHub.
+                            No hay secretos, no hay código oculto. La transparencia es nuestra garantía.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>¿Cómo sé que no tiene virus?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Al ser open source, cualquier desarrollador puede auditar el código. Además, puedes compilar
+                            la app tú mismo desde el código fuente. No hay forma de ocultar malware en código público.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>¿Mis datos están seguros?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutamente. Tus datos nunca salen de tu dispositivo. No hay servidores, no hay cloud,
+                            no hay recolección de información. Tu privacidad es 100% respetada.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
+    <section class="final-cta" id="download">
+        <div class="container">
+            <div class="final-cta-content fade-in">
+                <h2>COMIENZA TU TRANSFORMACIÓN HOY</h2>
+                <p>Descarga gratis. Sin trucos. Sin sorpresas.</p>
+
+                <div class="final-cta-buttons">
+                    <a href="app-release.apk" download="TrainerPro.apk" class="btn btn-primary btn-mega glow-pulse">
+                        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        DESCARGAR TRAINER PRO
+                    </a>
+                    <a href="https://github.com/Abdolijvcc/musta_pro" target="_blank" rel="noopener"
+                        class="btn btn-ghost">
+                        O revisa el código primero →
+                    </a>
+                </div>
+
+                <div class="stats-grid mt-8">
+                    <div class="badge badge-success badge-glow">Gratis Forever</div>
+                    <div class="badge badge-success badge-glow">Sin Ads</div>
+                    <div class="badge badge-success badge-glow">Open Source</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">TRAINER PRO</div>
+                    <p class="footer-description">
+                        Sistema de entrenamiento inteligente diseñado para atletas que buscan resultados reales.
+                        100% gratis, 100% open source, 100% tuyo.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Abdolijvcc/musta_pro" target="_blank" rel="noopener"
+                            class="social-link" aria-label="GitHub">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <div class="footer-links">
+                        <a href="#home">Inicio</a>
+                        <a href="#features">Features</a>
+                        <a href="#gallery">Galería</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <div class="footer-links">
+                        <a href="https://github.com/Abdolijvcc/musta_pro" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://github.com/Abdolijvcc/musta_pro/issues" target="_blank" rel="noopener">Reportar
+                            Bug</a>
+                        <a href="https://github.com/Abdolijvcc/musta_pro#readme" target="_blank"
+                            rel="noopener">Documentación</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacidad</a>
+                        <a href="#">Términos</a>
+                        <a href="https://github.com/Abdolijvcc/musta_pro/blob/main/LICENSE" target="_blank"
+                            rel="noopener">Licencia</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2026 TRAINER PRO. Made with 💪 by the community.
+                </p>
+                <span class="footer-badge">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Open Source Project
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== STICKY CTA (MOBILE) ========== -->
+    <div class="sticky-cta">
+        <a href="app-release.apk" download="TrainerPro.apk" class="btn btn-primary" style="width: 100%;">
+            DESCARGAR AHORA
+        </a>
+    </div>
+
+    <!-- ========== MODAL FOR SCREENSHOTS ========== -->
+    <div class="modal" id="screenshotModal">
+        <div class="modal-backdrop"></div>
+        <button class="modal-close" id="closeModal">×</button>
+        <div class="modal-content">
+            <img src="" alt="Screenshot ampliado" class="modal-image" id="modalImage">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
