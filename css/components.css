@@ -81,6 +81,23 @@
     height: 24px;
 }
 
+@media (max-width: 768px) {
+    .btn {
+        padding: var(--space-4) var(--space-6);
+        font-size: var(--fs-base);
+    }
+
+    .btn-mega {
+        padding: var(--space-5) var(--space-8);
+        font-size: var(--fs-xl);
+    }
+
+    .btn-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 /* ========== CARDS ========== */
 .card {
     background: var(--bg-card);
@@ -140,6 +157,26 @@
 .card-description {
     color: var(--text-secondary);
     line-height: var(--lh-relaxed);
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: var(--space-6);
+    }
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: var(--fs-3xl);
+    }
+
+    .card-title {
+        font-size: var(--fs-xl);
+    }
+
+    .card-description {
+        font-size: var(--fs-sm);
+    }
 }
 
 /* ========== BADGES ========== */
